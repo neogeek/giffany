@@ -1,0 +1,10 @@
+{
+  "title": "giffany",
+  "private": true,
+  "dependencies": {
+    "restify": "4.1.1"
+  },
+  "scripts": {
+    "start": "node web.js"
+  }
+}
