@@ -1,6 +1,9 @@
 {
   "title": "giffany",
   "private": true,
+  "engines": {
+    "node": ">=6.0"
+  },
   "dependencies": {
     "restify": "4.1.1"
   },
