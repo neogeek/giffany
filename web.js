@@ -26,7 +26,7 @@ server.post('/giffany', restify.bodyParser(), (req, res) => {
 
         res.send({
             'response_type': 'ephemeral',
-            'text': `No gif found for *${req.params.query}*.`
+            'text': `Sorry! No gif was found for *${req.params.text}*.`
         });
 
     }
