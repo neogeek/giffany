@@ -8,7 +8,7 @@ const search = require('./utils/search.js');
 
 const images = require('./data/gravity-falls.json').images;
 
-server.get('/auth', restify.queryParser(), (req, res, next) => {
+server.get('/authorize', restify.queryParser(), (req, res, next) => {
 
     request(`https://slack.com/api/oauth.access?client_id=${process.env.CLIENT_ID}&client_secret=${process.env.CLIENT_SECRET}&code=${req.params.code}`,
         (err, response, body) => {
