@@ -1,10 +1,33 @@
 const restify = require('restify');
 
+const request = require('request');
+
 const server = restify.createServer();
 
 const search = require('./utils/search.js');
 
 const images = require('./data/gravity-falls.json').images;
+
+server.get('/auth', restify.queryParser(), (req, res, next) => {
+
+    request(`https://slack.com/api/oauth.access?client_id=${process.env.CLIENT_ID}&client_secret=${process.env.CLIENT_SECRET}&code=${req.params.code}`,
+        (err, response, body) => {
+
+            const bodyJSON = JSON.parse(body);
+
+            if (bodyJSON.ok) {
+
+                res.redirect('https://github.com/neogeek/giffany', next);
+
+            } else {
+
+                res.redirect('https://github.com/neogeek/giffany/issues/new?title=Issues%20logging%20in%20with%20Slack', next);
+
+            }
+
+        });
+
+});
 
 server.post('/giffany', restify.bodyParser(), (req, res) => {
 
