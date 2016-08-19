@@ -58,6 +58,8 @@ server.post('/giffany', restify.bodyParser(), (req, res) => {
             'text': `Sorry! No gif was found for *${req.params.text}*.`
         });
 
+        console.warn(`Failed keyword search: "${req.params.text}"`);
+
     }
 
 });
