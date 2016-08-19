@@ -21,7 +21,7 @@ server.get('/authorize', restify.queryParser(), (req, res, next) => {
 
             } else {
 
-                res.redirect('https://github.com/neogeek/giffany/issues/new?title=Issues%20logging%20in%20with%20Slack', next);
+                res.redirect('https://github.com/neogeek/giffany/issues/new?title=Issues%installing%20to%20Slack', next);
 
             }
 
