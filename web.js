@@ -31,6 +31,12 @@ server.get('/authorize', restify.queryParser(), (req, res, next) => {
 
 server.post('/giffany', restify.bodyParser(), (req, res) => {
 
+    if (req.params.token !== process.env.SLACK_VERIFY_TOKEN) {
+
+        return res.send(401, 'Unauthorized')
+
+    }
+
     const results = search(images, req.params.text);
 
     if (results) {
