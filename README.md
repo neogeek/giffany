@@ -1,3 +1,5 @@
+[![](https://img.shields.io/badge/features-trello%20board-blue.svg)](https://trello.com/b/fE6qXFUl/giffany)
+
 # /giffany - GIFs from Gravity Falls
 
 > giffany lets you search a curated list of animated gifs from the Disney TV show Gravity Falls and share them within Slack.
