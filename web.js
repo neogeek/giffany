@@ -16,7 +16,7 @@ server.post('/giffany', restify.bodyParser(), (req, res) => {
             'response_type': 'in_channel',
             'attachments': [
                 {
-                    "fallback": results.keywords.join(' '),
+                    'fallback': results.keywords.join(' '),
                     'image_url': results.url
                 }
             ]
