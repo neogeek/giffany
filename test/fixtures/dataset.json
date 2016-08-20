@@ -1,0 +1,20 @@
+{
+    "images": [
+        {
+            "keywords": ["apple", "green", "red", "fruit"],
+            "url": "apple.gif"
+        },
+        {
+            "keywords": ["orange", "fruit"],
+            "url": "orange.gif"
+        },
+        {
+            "keywords": ["pear", "green"],
+            "url": "pear.gif"
+        },
+        {
+            "keywords": ["fries", "yellow"],
+            "url": "fries.gif"
+        }
+    ]
+}
