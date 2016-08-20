@@ -4,6 +4,8 @@ const request = require('request');
 
 const server = restify.createServer();
 
+const filter = require('./utils/filter.js');
+const random = require('./utils/random.js');
 const search = require('./utils/search.js');
 
 const images = require('./data/gravity-falls.json').images;
@@ -37,7 +39,7 @@ server.post('/giffany', restify.bodyParser(), (req, res) => {
 
     }
 
-    const results = search(images, req.params.text);
+    const results = random(filter(search(images, req.params.text)));
 
     if (results) {
 

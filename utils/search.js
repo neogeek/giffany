@@ -22,15 +22,11 @@ const search = (images, query = '') => {
 
         }
 
-        return prevResults.filter((result) => result.matches >= matches);
+        return prevResults;
 
     }, []);
 
-    if (results.length) {
-
-        return results[Math.floor(Math.random() * results.length)];
-
-    }
+    return results;
 
 };
 
