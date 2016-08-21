@@ -21,7 +21,7 @@
             "url": "https://media.giphy.com/media/2V04ngYdkVpnO/giphy.gif"
         },
         {
-            "keywords": ["waddles", "emergancy", "hug", "pig"],
+            "keywords": ["waddles", "pig", "emergancy", "hug"],
             "url": "https://media.giphy.com/media/TzBM1nJmLFmJq/giphy.gif"
         },
         {
@@ -141,7 +141,7 @@
             "url": "https://67.media.tumblr.com/cfb7088b221077a3ce4c7642bb9da8c8/tumblr_nwf1y4fqmS1ropifdo2_540.gif"
         },
         {
-            "keywords": ["mabel", "waddles", "cuddle"],
+            "keywords": ["mabel", "waddles", "pig", "cuddle"],
             "url": "https://67.media.tumblr.com/ba4e8574c3dda9936df18caae955611b/tumblr_nvuscl6KZv1sqgl63o1_1280.gif"
         },
         {
@@ -261,7 +261,7 @@
             "url": "https://media.giphy.com/media/Pf56jfkPZrefe/giphy.gif"
         },
         {
-            "keywords": ["mabel", "waddles", "hug"],
+            "keywords": ["mabel", "waddles", "pig", "hug"],
             "url": "https://media.giphy.com/media/14motCtkDvt8WI/giphy.gif"
         },
         {
@@ -293,15 +293,15 @@
             "url": "https://media.giphy.com/media/v4KuKXHaHUqaY/giphy.gif"
         },
         {
-            "keywords": ["waddles", "blink"],
+            "keywords": ["waddles", "pig", "blink"],
             "url": "https://media.giphy.com/media/SwWrhzXVM7NdK/giphy.gif"
         },
         {
-            "keywords": ["waddles", "gompers", "attack"],
+            "keywords": ["waddles", "pig", "gompers", "goat", "attack"],
             "url": "https://media.giphy.com/media/S8IhATPdRUyGs/giphy.gif"
         },
         {
-            "keywords": ["waddles", "halloween", "candy", "nom", "eat", "summerween"],
+            "keywords": ["waddles", "pig", "halloween", "candy", "nom", "eat", "summerween"],
             "url": "https://media.giphy.com/media/L89WZ8ZyvcJbi/giphy.gif"
         },
         {
@@ -365,7 +365,7 @@
             "url": "https://media.giphy.com/media/m3U0ZlubVdGaA/giphy.gif"
         },
         {
-            "keywords": ["mabel", "dipper", "waddles"],
+            "keywords": ["mabel", "dipper", "waddles", "pig"],
             "url": "https://media.giphy.com/media/OsRpq6Th4Z9Zu/giphy.gif"
         },
         {
@@ -423,6 +423,18 @@
         {
             "keywords": ["mabel", "found", "people"],
             "url": "http://ak-hdl.buzzfed.com/static/2014-06/17/13/enhanced/webdr07/anigif_enhanced-28635-1403027031-1.gif"
+        },
+        {
+            "keywords": ["waddles", "pig", "yummy", "fat", "tummy"],
+            "url": "http://67.media.tumblr.com/042da1115b37ef6613be5cdd0c4a6354/tumblr_o5i4pfgsox1sbqrlmo1_500.gif"
+        },
+        {
+            "keywords": ["waddles", "pig", "gompers", "goat", "power", "couple"],
+            "url": "http://66.media.tumblr.com/7caefac8a77998f2d8fd933d807432b2/tumblr_nfmbpi2AUm1rz6w0do1_500.gif"
+        },
+        {
+            "keywords": ["robbie", "tambry"],
+            "url": "http://65.media.tumblr.com/b1e9d69ecfb5b4d0173b324652d8a079/tumblr_nfkbh3gBuU1r45g3go1_500.gif"
         }
     ]
 }
