@@ -1,32 +1,22 @@
-const search = (images, query = '') => {
+const search = (images = {'keywords': []}, query = '') => {
 
-    const tags = query.replace(/[^\w ]+/g, '').toLowerCase().split(/\s+/);
+    const tags = query.toLowerCase().replace(/[^\w ]+/g, '').split(/\s+/);
 
-    const results = images.reduce((prevResults, currImage) => {
+    return images.map((image) => {
 
-        const matches = tags.reduce((prevMatches, currTag) => {
+        const matches = image.keywords.filter((keyword) => {
 
-            if (currImage.keywords.indexOf(currTag) !== -1) {
+            return tags.filter((value) => value === keyword).length;
 
-                return prevMatches + 1;
-
-            }
-
-            return prevMatches;
-
-        }, 0);
+        }).length;
 
         if (matches) {
 
-            prevResults.push(Object.assign({}, currImage, {matches}));
+            return Object.assign({}, image, {matches});
 
         }
 
-        return prevResults;
-
-    }, []);
-
-    return results;
+    }).filter(Boolean);
 
 };
 
