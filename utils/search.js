@@ -1,4 +1,4 @@
-const search = (images = {'keywords': []}, query = '') => {
+const search = (images = [], query = '') => {
 
     const tags = query.toLowerCase().replace(/[^\w ]+/g, '').split(/\s+/);
 
