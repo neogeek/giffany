@@ -15,6 +15,9 @@ const images = require('./data/gravity-falls.json').images;
 const HTTP_CODE_UNAUTHORIZED = 401;
 const HTTP_CODE_INTERNAL_SERVER_ERROR = 500;
 
+const DEBUG_JSON_SPACES = 4;
+const DEBUG_FLAG_REGEX = /#debug/;
+
 server.get('/authorize', restify.queryParser(), (req, res, next) => {
 
     request(`https://slack.com/api/oauth.access?client_id=${process.env.CLIENT_ID}` +
@@ -53,7 +56,7 @@ server.post('/giffany', restify.bodyParser(), (req, res) => {
 
     if (results) {
 
-        return res.send({
+        const response = {
             'attachments': [
                 {
                     'fallback': results.keywords.join(' '),
@@ -61,7 +64,15 @@ server.post('/giffany', restify.bodyParser(), (req, res) => {
                 }
             ],
             'response_type': 'in_channel'
-        });
+        };
+
+        if (req.params.text.match(DEBUG_FLAG_REGEX)) {
+
+            response.text = `\`\`\`\n${JSON.stringify(results, null, DEBUG_JSON_SPACES)}\n\`\`\``;
+
+        }
+
+        return res.send(response);
 
     }
 
