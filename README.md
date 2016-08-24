@@ -1,4 +1,5 @@
-[![](https://img.shields.io/badge/features-trello%20board-blue.svg)](https://trello.com/b/fE6qXFUl/giffany)
+[![Build Status](https://travis-ci.org/neogeek/giffany.svg?branch=master)](https://travis-ci.org/neogeek/giffany)
+[![Trello Features](https://img.shields.io/badge/features-trello%20board-blue.svg)](https://trello.com/b/fE6qXFUl/giffany)
 
 # /giffany - GIFs from Gravity Falls
 
