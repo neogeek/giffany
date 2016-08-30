@@ -9,5 +9,9 @@
   },
   "extends": [
     "@neogeek/eslint-config-standards"
-  ]
+  ],
+  "rules": {
+    "max-statements": 0,
+    "camelcase": 0
+  }
 }
