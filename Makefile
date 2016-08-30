@@ -7,7 +7,4 @@ test:
 deploy:
 	git push heroku master
 
-deploy-dev:
-	git push heroku-dev feature/preview:master -f
-
 .PHONY: test
