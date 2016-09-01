@@ -98,6 +98,7 @@ server.post('/giffany', restify.bodyParser(), auth, (req, res) => {
                 }
             ];
 
+            response.replace_original = false;
             response.response_type = 'ephemeral';
 
         }
