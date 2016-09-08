@@ -8,6 +8,7 @@
     "test": "make test"
   },
   "dependencies": {
+    "node-cache": "3.2.1",
     "request": "2.74.0",
     "restify": "4.1.1"
   },
