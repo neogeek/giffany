@@ -1,8 +1,8 @@
-const filter = (matches) => {
+const filter = matches => {
 
-    const highestMatch = Math.max(...matches.map((item) => item.matches));
+    const highestMatch = Math.max(...matches.map(item => item.matches));
 
-    return matches.filter((result) => result.matches >= highestMatch);
+    return matches.filter(result => result.matches >= highestMatch);
 
 };
 

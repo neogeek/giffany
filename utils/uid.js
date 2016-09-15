@@ -1,6 +1,6 @@
 const crypto = require('crypto');
 
-const generateUID = (params) => {
+const generateUID = params => {
 
     let team_id = null;
     let user_id = null;

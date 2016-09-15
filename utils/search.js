@@ -4,10 +4,10 @@ const search = (images = [], query = '') => {
         .replace(/[^\w ]+/g, '')
         .split(/\s+/);
 
-    return images.map((image) => {
+    return images.map(image => {
 
-        const matches = image.keywords.filter((keyword) =>
-            tags.filter((value) => value === keyword).length
+        const matches = image.keywords.filter(keyword =>
+            tags.filter(value => value === keyword).length
         ).length;
 
         if (matches) {
