@@ -9,8 +9,11 @@ const authorizeRoute = require('./src/routes/authorize.js');
 const giffanyRoute = require('./src/routes/giffany/index.js');
 const giffanyActionRoute = require('./src/routes/giffany/action.js');
 
-server.get('/authorize', restify.queryParser(), authorizeRoute);
-server.post('/giffany', restify.bodyParser(), auth, giffanyRoute);
-server.post('/giffany/action', restify.bodyParser(), payloadParser, auth, giffanyActionRoute);
+server.use(restify.queryParser());
+server.use(restify.bodyParser());
+
+server.get('/authorize', authorizeRoute);
+server.post('/giffany', auth, giffanyRoute);
+server.post('/giffany/action', payloadParser, auth, giffanyActionRoute);
 
 server.listen(process.env.PORT);
