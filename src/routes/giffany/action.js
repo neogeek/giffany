@@ -1,3 +1,5 @@
+const request = require('request-promise');
+
 const filter = require('../../../utils/filter.js');
 const generateUID = require('../../../utils/uid.js');
 const random = require('../../../utils/random.js');
@@ -48,6 +50,15 @@ module.exports = (req, res) => {
         }
 
     }
+
+    request('https://slack.com/api/chat.postMessage', {
+        'qs': {
+            'as_user': true,
+            'channel': req.params.channel.id,
+            'text': cache.get(uid).query,
+            'token': req.params.token
+        }
+    }).then(res => console.log(res));
 
     return res.send(response);
 
