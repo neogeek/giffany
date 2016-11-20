@@ -1,9 +1,5 @@
 {
-  "globals": {
-    "describe": true,
-    "it": true
-  },
-  "rules": {
-    "no-magic-numbers": 0
-  }
+  "extends": [
+    "@neogeek/eslint-config-standards/.eslintrc-tests"
+  ]
 }
