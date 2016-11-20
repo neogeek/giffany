@@ -4,6 +4,9 @@
     "node": ">=6.0"
   },
   "scripts": {
+    "start": "concurrently 'npm run server' 'npm run localtunnel' --kill-others",
+    "server": "nodemon web.js",
+    "localtunnel": "lt --subdomain giffany --port 8080",
     "test": "make test"
   },
   "dependencies": {
@@ -11,11 +14,13 @@
     "redis": "2.6.3",
     "request": "2.79.0",
     "request-promise": "4.1.1",
-    "restify": "4.3.0"
+    "restify": "4.3.0",
+    "with-env": "neogeek/with-env"
   },
   "devDependencies": {
     "@neogeek/eslint-config-standards": "1.8.0",
     "eslint": "3.10.2",
+    "localtunnel": "1.8.2",
     "mocha": "3.1.2"
   },
   "private": true

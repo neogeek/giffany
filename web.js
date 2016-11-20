@@ -1,3 +1,5 @@
+require('with-env')();
+
 const restify = require('restify');
 
 const server = restify.createServer();
