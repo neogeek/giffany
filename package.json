@@ -1,6 +1,5 @@
 {
   "title": "giffany",
-  "private": true,
   "engines": {
     "node": ">=6.0"
   },
@@ -8,15 +7,16 @@
     "test": "make test"
   },
   "dependencies": {
-    "node-cache": "3.2.1",
-    "redis": "2.6.2",
-    "request": "2.74.0",
+    "node-cache": "4.1.0",
+    "redis": "2.6.3",
+    "request": "2.79.0",
     "request-promise": "4.1.1",
-    "restify": "4.1.1"
+    "restify": "4.3.0"
   },
   "devDependencies": {
-    "@neogeek/eslint-config-standards": "1.4.0",
-    "eslint": "3.5.0",
-    "mocha": "3.0.2"
-  }
+    "@neogeek/eslint-config-standards": "1.8.0",
+    "eslint": "3.10.2",
+    "mocha": "3.1.2"
+  },
+  "private": true
 }
