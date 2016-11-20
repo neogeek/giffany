@@ -4,8 +4,8 @@ const assert = require('assert');
 
 const images = require('../../fixtures/dataset.json').images;
 
-const filter = require('../../../utils/filter');
-const search = require('../../../utils/search');
+const filter = require('../../../src/utils/filter');
+const search = require('../../../src/utils/search');
 
 describe('filter', () => {
 

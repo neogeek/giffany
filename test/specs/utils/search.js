@@ -4,7 +4,7 @@ const assert = require('assert');
 
 const images = require('../../fixtures/dataset.json').images;
 
-const search = require('../../../utils/search');
+const search = require('../../../src/utils/search');
 
 describe('search', () => {
 

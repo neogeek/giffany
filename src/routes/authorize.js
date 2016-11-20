@@ -1,6 +1,6 @@
 const request = require('request-promise');
 
-const redis = require('../../utils/redis')(process.env.REDISTOGO_URL);
+const redis = require('../utils/redis')(process.env.REDISTOGO_URL);
 
 const HTTP_CODE_INTERNAL_SERVER_ERROR = 500;
 

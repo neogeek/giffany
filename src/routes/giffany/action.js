@@ -1,17 +1,17 @@
 const request = require('request-promise');
 
-const filter = require('../../../utils/filter.js');
-const generateUID = require('../../../utils/uid.js');
-const random = require('../../../utils/random.js');
-const search = require('../../../utils/search.js');
+const filter = require('../../utils/filter.js');
+const generateUID = require('../../utils/uid.js');
+const random = require('../../utils/random.js');
+const search = require('../../utils/search.js');
 
-const cache = require('../../../utils/cache.js');
+const cache = require('../../utils/cache.js');
 
 const {
     displayDebugInformation,
     displayPreviewButtons,
     displayImage
-} = require('../../../utils/display.js');
+} = require('../../utils/display.js');
 
 const images = require('../../../data/gravity-falls.json').images;
 

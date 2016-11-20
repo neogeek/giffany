@@ -2,8 +2,8 @@ const restify = require('restify');
 
 const server = restify.createServer();
 
-const auth = require('./utils/auth.js');
-const payloadParser = require('./utils/payloadParser.js');
+const auth = require('./src/utils/auth.js');
+const payloadParser = require('./src/utils/payloadParser.js');
 
 const authorizeRoute = require('./src/routes/authorize.js');
 const giffanyRoute = require('./src/routes/giffany/index.js');

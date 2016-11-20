@@ -5,7 +5,7 @@ const assert = require('assert');
 const post = require('../../fixtures/post.json');
 const payload = require('../../fixtures/payload.json').payload;
 
-const generateUID = require('../../../utils/uid');
+const generateUID = require('../../../src/utils/uid');
 
 describe('uid', () => {
 
