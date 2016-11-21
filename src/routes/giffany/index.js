@@ -1,17 +1,17 @@
 /* eslint no-console: ["error", { allow: ["warn"] }] */
 
-const filter = require('../../utils/filter.js');
-const generateUID = require('../../utils/uid.js');
-const random = require('../../utils/random.js');
-const search = require('../../utils/search.js');
+const filter = require('../../utils/filter');
+const generateUID = require('../../utils/uid');
+const random = require('../../utils/random');
+const search = require('../../utils/search');
 
-const cache = require('../../utils/cache.js');
+const cache = require('../../utils/cache');
 
 const {
     displayDebugInformation,
     displayPreviewButtons,
     displayImage
-} = require('../../utils/display.js');
+} = require('../../utils/display');
 
 const images = require('../../../data/gravity-falls.json').images;
 

@@ -1,17 +1,17 @@
 const request = require('request-promise');
 
-const filter = require('../../utils/filter.js');
-const generateUID = require('../../utils/uid.js');
-const random = require('../../utils/random.js');
-const search = require('../../utils/search.js');
+const filter = require('../../utils/filter');
+const generateUID = require('../../utils/uid');
+const random = require('../../utils/random');
+const search = require('../../utils/search');
 
-const cache = require('../../utils/cache.js');
+const cache = require('../../utils/cache');
 
 const {
     displayDebugInformation,
     displayPreviewButtons,
     displayImage
-} = require('../../utils/display.js');
+} = require('../../utils/display');
 
 const images = require('../../../data/gravity-falls.json').images;
 
@@ -29,7 +29,15 @@ module.exports = (req, res) => {
 
         if (req.params.actions[0].value === 'ok') {
 
-            response.attachments = cache.get(uid).attachments;
+            response.attachments = Object.assign({}, cache.get(uid).attachments);
+
+            request.post(req.params.response_url, {
+                'body': {
+                    'response_type': 'in_channel',
+                    'text': 'hey'
+                },
+                'json': true
+            });
 
         } else if (req.params.actions[0].value === 'random') {
 
@@ -50,15 +58,6 @@ module.exports = (req, res) => {
         }
 
     }
-
-    request('https://slack.com/api/chat.postMessage', {
-        'qs': {
-            'as_user': true,
-            'channel': req.params.channel.id,
-            'text': cache.get(uid).query,
-            'token': req.params.token
-        }
-    }).then(res => console.log(res));
 
     return res.send(response);
 
