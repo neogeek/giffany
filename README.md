@@ -2,6 +2,7 @@
 
 > giffany lets you search a curated list of animated gifs from the Disney TV show Gravity Falls and share them within Slack.
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/neogeek/giffany.svg)](https://greenkeeper.io/)
 [![Build Status](https://travis-ci.org/neogeek/giffany.svg?branch=master)](https://travis-ci.org/neogeek/giffany)
 
 ## Install to Slack
