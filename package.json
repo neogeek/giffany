@@ -19,7 +19,7 @@
   },
   "devDependencies": {
     "@neogeek/eslint-config-standards": "1.14.0",
-    "eslint": "3.17.1",
+    "eslint": "3.18.0",
     "localtunnel": "1.8.2",
     "mocha": "3.2.0"
   },
