@@ -18,10 +18,10 @@
     "with-env": "neogeek/with-env"
   },
   "devDependencies": {
-    "@neogeek/eslint-config-standards": "1.15.0",
-    "eslint": "3.18.0",
-    "localtunnel": "1.8.2",
-    "mocha": "3.2.0"
+    "@neogeek/eslint-config-standards": "^1.15.0",
+    "eslint": "^3.18.0",
+    "localtunnel": "^1.8.2",
+    "mocha": "^3.2.0"
   },
   "private": true
 }
