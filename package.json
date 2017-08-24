@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "node-cache": "4.1.1",
-    "redis": "2.7.1",
+    "redis": "2.8.0",
     "request": "2.81.0",
     "request-promise": "4.2.1",
     "restify": "4.3.0",
