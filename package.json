@@ -7,7 +7,9 @@
     "start": "concurrently 'npm run server' 'npm run localtunnel' --kill-others",
     "server": "nodemon web.js",
     "localtunnel": "lt --subdomain giffany --port 8080",
-    "test": "make test"
+    "test": "make test",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
     "node-cache": "4.1.1",
@@ -15,7 +17,8 @@
     "request": "2.81.0",
     "request-promise": "4.2.1",
     "restify": "5.2.0",
-    "with-env": "neogeek/with-env"
+    "with-env": "neogeek/with-env",
+    "snyk": "^1.319.0"
   },
   "devDependencies": {
     "@neogeek/eslint-config-standards": "^1.15.0",
@@ -23,5 +26,6 @@
     "localtunnel": "^1.8.2",
     "mocha": "^3.2.0"
   },
-  "private": true
+  "private": true,
+  "snyk": true
 }
