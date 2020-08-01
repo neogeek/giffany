@@ -1,7 +1,7 @@
 {
   "title": "giffany",
   "engines": {
-    "node": ">=6.0"
+    "node": ">=12.0"
   },
   "scripts": {
     "start": "concurrently 'npm run server' 'npm run localtunnel' --kill-others",
