@@ -1,7 +1,5 @@
 const request = require('request-promise');
 
-const redis = require('../utils/redis')(process.env.REDISTOGO_URL);
-
 const HTTP_CODE_INTERNAL_SERVER_ERROR = 500;
 
 module.exports = (req, res, next) => {
@@ -13,25 +11,7 @@ module.exports = (req, res, next) => {
     })
         .then(data => {
             if (data.ok) {
-                redis.set(
-                    data.team_id,
-                    JSON.stringify({ token: data.access_token }),
-                    (err, storedData) => {
-                        if (err) {
-                            console.log(err);
-
-                            return res.send(
-                                HTTP_CODE_INTERNAL_SERVER_ERROR,
-                                err
-                            );
-                        }
-
-                        return res.redirect(
-                            'https://github.com/neogeek/giffany',
-                            next
-                        );
-                    }
-                );
+                return res.redirect('https://github.com/neogeek/giffany', next);
             } else {
                 return res.redirect(
                     'https://github.com/neogeek/giffany/issues/',
