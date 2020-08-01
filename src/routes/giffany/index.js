@@ -14,9 +14,9 @@ const {
 const images = require('../../../data/gravity-falls.json').images;
 
 module.exports = (req, res) => {
-    const uid = generateUID(req.params);
+    const uid = generateUID(req.body);
 
-    const query = req.params.text;
+    const query = req.body.text;
 
     const image = random(filter(search(images, query)));
 

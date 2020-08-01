@@ -7,7 +7,7 @@ module.exports = (req, res, next) => {
         json: true,
         uri:
             `https://slack.com/api/oauth.access?client_id=${process.env.CLIENT_ID}` +
-            `&client_secret=${process.env.CLIENT_SECRET}&code=${req.params.code}`
+            `&client_secret=${process.env.CLIENT_SECRET}&code=${req.body.code}`
     })
         .then(data => {
             if (data.ok) {

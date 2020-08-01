@@ -1,8 +1,8 @@
 const payloadParser = (req, res, next) => {
-    if (req.params.payload) {
-        const payload = JSON.parse(req.params.payload);
+    if (req.body.payload) {
+        const payload = JSON.parse(req.body.payload);
 
-        req.params = Object.assign({}, req.params, payload);
+        req.body = Object.assign({}, req.body, payload);
     }
 
     return next();

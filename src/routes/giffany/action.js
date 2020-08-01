@@ -16,7 +16,7 @@ const {
 const images = require('../../../data/gravity-falls.json').images;
 
 module.exports = (req, res) => {
-    const uid = generateUID(req.params);
+    const uid = generateUID(req.body);
 
     let response = {
         delete_original: true,
@@ -24,21 +24,21 @@ module.exports = (req, res) => {
         response_type: 'in_channel'
     };
 
-    if (req.params.callback_id === 'preview_image') {
-        if (req.params.actions[0].value === 'ok') {
+    if (req.body.callback_id === 'preview_image') {
+        if (req.body.actions[0].value === 'ok') {
             response.attachments = Object.assign(
                 {},
                 cache.get(uid).attachments
             );
 
-            request.post(req.params.response_url, {
+            request.post(req.body.response_url, {
                 body: {
                     response_type: 'in_channel',
                     text: 'hey'
                 },
                 json: true
             });
-        } else if (req.params.actions[0].value === 'random') {
+        } else if (req.body.actions[0].value === 'random') {
             const query = cache.get(uid).query;
 
             const image = random(filter(search(images, query)));
