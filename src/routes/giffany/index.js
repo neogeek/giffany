@@ -1,5 +1,3 @@
-/* eslint no-console: ["error", { allow: ["warn"] }] */
-
 const filter = require('../../utils/filter');
 const generateUID = require('../../utils/uid');
 const random = require('../../utils/random');
