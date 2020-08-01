@@ -14,7 +14,6 @@ const {
 const images = require('../../../data/gravity-falls.json').images;
 
 module.exports = (req, res) => {
-
     const uid = generateUID(req.params);
 
     const query = req.params.text;
@@ -24,28 +23,23 @@ module.exports = (req, res) => {
     let response = {};
 
     if (image) {
-
         response = displayImage(query, image, response);
 
         cache.set(uid, {
-            'attachments': response.attachments,
+            attachments: response.attachments,
             query
         });
 
         response = displayDebugInformation(query, image, response);
         response = displayPreviewButtons(query, response);
-
     } else {
-
         console.warn(`Failed keyword search: "${query}"`);
 
         response = {
-            'response_type': 'ephemeral',
-            'text': `Sorry! No gif was found for *${query}*.`
+            response_type: 'ephemeral',
+            text: `Sorry! No gif was found for *${query}*.`
         };
-
     }
 
     return res.send(response);
-
 };
