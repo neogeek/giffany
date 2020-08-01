@@ -3,12 +3,6 @@
   "engines": {
     "node": ">=12.0"
   },
-  "scripts": {
-    "start": "concurrently 'npm run server' 'npm run localtunnel' --kill-others",
-    "server": "nodemon web.js",
-    "localtunnel": "lt --subdomain giffany --port 8080",
-    "test": "make test"
-  },
   "dependencies": {
     "node-cache": "4.1.1",
     "request": "2.81.0",
@@ -17,8 +11,10 @@
     "with-env": "neogeek/with-env"
   },
   "devDependencies": {
-    "localtunnel": "1.8.2",
     "mocha": "3.2.0"
+  },
+  "scripts": {
+    "test": "make test"
   },
   "private": true
 }
