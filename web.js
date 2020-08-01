@@ -11,8 +11,8 @@ const authorizeRoute = require('./src/routes/authorize.js');
 const giffanyRoute = require('./src/routes/giffany/index.js');
 const giffanyActionRoute = require('./src/routes/giffany/action.js');
 
-server.use(restify.queryParser());
-server.use(restify.bodyParser());
+server.use(restify.plugins.queryParser());
+server.use(restify.plugins.bodyParser());
 
 server.get('/authorize', authorizeRoute);
 server.post('/giffany', auth, giffanyRoute);
