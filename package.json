@@ -1,5 +1,5 @@
 {
-  "title": "giffany",
+  "name": "giffany",
   "engines": {
     "node": ">=12.0"
   },
