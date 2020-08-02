@@ -14,6 +14,8 @@ module.exports = (req, res) => {
         if (req.body.actions[0].value === 'ok') {
             const image = cache.get(uuid).image;
 
+            cache.del(uuid);
+
             return res.send({
                 delete_original: true,
                 replace_original: false,
@@ -68,6 +70,8 @@ module.exports = (req, res) => {
                 ]
             });
         } else {
+            cache.del(uuid);
+
             return res.send({
                 delete_original: true,
                 response_type: 'in_channel'
