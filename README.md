@@ -1,6 +1,6 @@
 # /giffany - GIFs from Gravity Falls
 
-> giffany lets you search a curated list of animated gifs from the Disney TV show Gravity Falls and share them within Slack.
+> giffany lets you search a curated list of animated gifs from the Disney+ show Gravity Falls and share them within Slack. All gifs are from websites like Giphy, Tumblr, and Imgur.
 
 ## Install to Slack
 
