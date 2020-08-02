@@ -1,20 +1,13 @@
-const filter = require('../../utils/filter');
-const random = require('../../utils/random');
-const search = require('../../utils/search');
-
-const cache = require('../../utils/cache');
-
-const images = require('../../../data/gravity-falls.json').images;
+const gifs = require('../../../data/gravity-falls.json');
 
 const HTTP_CODE_OK = 200;
 
 module.exports = (req, res) => {
-    if (req.body.callback_id === 'preview_image') {
-        const uuid = `${req.body.channel.id}-${req.body.user.id}`;
-        if (req.body.actions[0].value === 'ok') {
-            const image = cache.get(uuid).image;
+    const payload = JSON.parse(req.body.payload);
 
-            cache.del(uuid);
+    if (payload.callback_id === 'preview_image') {
+        if (payload.actions[0].name === 'ok') {
+            const image = JSON.parse(payload.actions[0].value);
 
             return res.send({
                 delete_original: true,
@@ -27,15 +20,16 @@ module.exports = (req, res) => {
                     }
                 ]
             });
-        } else if (req.body.actions[0].value === 'random') {
-            const query = cache.get(uuid).query;
+        } else if (payload.actions[0].name === 'random') {
+            const searchKeywords = payload.actions[0].value.split(' ');
 
-            const image = random(filter(search(images, query)));
+            const images = gifs.filter(
+                ({ keywords }) =>
+                    searchKeywords.filter(value => keywords.includes(value))
+                        .length
+            );
 
-            cache.set(uuid, {
-                image,
-                query
-            });
+            const image = images[Math.floor(Math.random() * images.length)];
 
             return res.send({
                 response_type: 'ephemeral',
@@ -47,31 +41,29 @@ module.exports = (req, res) => {
                         image_url: image.url,
                         actions: [
                             {
-                                name: 'choice',
+                                name: 'ok',
                                 style: 'primary',
                                 text: 'OK',
                                 type: 'button',
-                                value: 'ok'
+                                value: JSON.stringify(image)
                             },
                             {
-                                name: 'choice',
+                                name: 'discard',
                                 text: 'Discard',
                                 type: 'button',
                                 value: 'discard'
                             },
                             {
-                                name: 'choice',
+                                name: 'random',
                                 text: '↻ Randomize',
                                 type: 'button',
-                                value: 'random'
+                                value: payload.actions[0].value
                             }
                         ]
                     }
                 ]
             });
         } else {
-            cache.del(uuid);
-
             return res.send({
                 delete_original: true,
                 response_type: 'in_channel'
