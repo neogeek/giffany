@@ -1,4 +1,4 @@
-const gifs = require('../../../data/gravity-falls.json');
+const gifs = require('../../../data/gifs.json');
 
 const HTTP_CODE_OK = 200;
 

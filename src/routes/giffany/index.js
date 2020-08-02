@@ -1,4 +1,4 @@
-const gifs = require('../../../data/gravity-falls.json');
+const gifs = require('../../../data/gifs.json');
 
 module.exports = (req, res) => {
     const searchKeywords = req.body.text.split(' ');
