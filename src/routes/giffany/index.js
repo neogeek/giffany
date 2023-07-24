@@ -1,6 +1,6 @@
 const gifs = require('../../../data/gifs.json');
 
-module.exports = (req, res) => {
+module.exports = (req, res, next) => {
     const searchKeywords = req.body.text.split(' ');
 
     const images = gifs.filter(

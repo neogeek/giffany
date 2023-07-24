@@ -2,7 +2,7 @@ const gifs = require('../../../data/gifs.json');
 
 const HTTP_CODE_OK = 200;
 
-module.exports = (req, res) => {
+module.exports = (req, res, next) => {
     const payload = JSON.parse(req.body.payload);
 
     if (payload.callback_id === 'preview_image') {
