@@ -46,7 +46,7 @@ module.exports = (req, res, next) => {
     } else {
         return res.send({
             response_type: 'ephemeral',
-            text: `Sorry! No gif was found for *${query}*.`
+            text: `Sorry! No gif was found for *${searchKeywords}*.`
         });
     }
 };
