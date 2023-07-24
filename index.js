@@ -7,6 +7,9 @@ const giffanyActionRoute = require('./src/routes/giffany/action.js');
 
 server.use(restify.plugins.bodyParser());
 
+server.get('/', (req, res, next) => {
+    res.send('OK');
+});
 server.post('/', giffanyRoute);
 server.post('/action', giffanyActionRoute);
 
