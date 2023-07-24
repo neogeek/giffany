@@ -4,7 +4,6 @@
     "node": ">=18.0"
   },
   "dependencies": {
-    "node-fetch": "3.3.1",
     "restify": "11.1.0"
   },
   "scripts": {
